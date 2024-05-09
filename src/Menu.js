@@ -1,7 +1,39 @@
 import React from "react"
+import { NavLink } from "react-router-dom"
 
 function Menu() {
-  return <nav>Menu</nav>
+  return (
+    <nav>
+      <ul>
+        {routes.map(route => (
+          <li>
+            <NavLink
+            style={({ isActive }) => ({
+              color: isActive ? "red" : "blue",
+            })}
+            to={route.to}
+            >
+              {route.Text}
+            </NavLink>
+          </li>
+        ))}
+        
+      </ul>
+    </nav>
+  )
 }
+const routes = []
+routes.push({ 
+  to: "/",
+  Text: "Home",
+ })
+routes.push({ 
+  to: "/blog",
+  Text: "Blog",
+ })
+routes.push({ 
+  to: "/profile",
+  Text: "Profile",
+ })
 
 export { Menu }
