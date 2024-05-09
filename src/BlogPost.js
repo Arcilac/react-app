@@ -15,9 +15,9 @@ function BlogPost() {
     return (
         <>
         <h2>{blogpost.title}</h2>
-        <button onClick={returnToBlog}>Return</button>
         <p>{blogpost.content}</p>
         <p>{blogpost.author}</p>
+        <button onClick={returnToBlog}>Return</button>
         
         </>
     )
