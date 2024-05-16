@@ -8,6 +8,7 @@ import { BlogPost } from "./BlogPost"
 import { LoginPage } from "./LoginPage"
 import { LogoutPage } from "./LogoutPage"
 import { AuthRoute } from "./auth"
+import "./styles.css"
 
 
 function App() {
